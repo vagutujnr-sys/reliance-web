@@ -1,0 +1,120 @@
+:root {
+  --red: #f3121c;
+  --red-hot: #ff2a33;
+  --black: #050505;
+  --charcoal: #101114;
+  --warm: #f4f3f0;
+  --white: #ffffff;
+  --muted: #a6a7aa;
+  --ink: #141518;
+  --silver: rgba(198, 202, 208, 0.38);
+  --utility-h: 34px;
+  --nav-h: 70px;
+  --nav-offset: 52px;
+  --logo-size: 162px;
+  --hero-gap: 8px;
+  --content: min(1500px, 80%);
+  --nav-shell: var(--content);
+  --hero-pad: calc(
+    var(--nav-offset) + var(--nav-h) + (var(--logo-size) - var(--nav-h)) / 2 + 12px
+  );
+  --font: "Segoe UI", Arial, Helvetica, sans-serif;
+  color-scheme: dark;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --utility-h: 32px;
+    --nav-h: 58px;
+    --nav-offset: 36px;
+    --logo-size: 117px;
+    --hero-gap: 6px;
+    --content: calc(100% - 32px);
+    --nav-shell: var(--content);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--warm);
+  color: var(--ink);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  z-index: 80;
+  transform: translateY(-160%);
+  background: var(--white);
+  color: var(--black);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

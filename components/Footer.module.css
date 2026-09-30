@@ -1,0 +1,181 @@
+.footer {
+  background: #050505;
+  color: #fff;
+  color-scheme: dark;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 0.9fr 1fr;
+  gap: 40px 32px;
+  width: var(--content);
+  margin-inline: auto;
+  padding: 64px 0 48px;
+}
+
+.brand {
+  max-width: 280px;
+}
+
+.logoLink {
+  display: inline-flex;
+  border-radius: 50%;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  margin: 16px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tagline {
+  margin: 0;
+  color: #c8c9cc;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.heading {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.links ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  color: #d0d1d4;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+.apps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  min-width: 188px;
+  padding: 8px 16px 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.badge:hover {
+  border-color: #fff;
+}
+
+.badgeDimmed {
+  opacity: 0.38;
+  filter: grayscale(1);
+  cursor: default;
+  user-select: none;
+}
+
+.storeIcon {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+}
+
+.badgeKicker,
+.badgeName {
+  display: block;
+  line-height: 1.1;
+}
+
+.badgeKicker {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badgeName {
+  margin-top: 2px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.comingSoon {
+  margin: 0;
+  color: #a6a7aa;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.disclaimer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  margin: 0;
+  padding: 18px 40px 28px;
+}
+
+.disclaimer p {
+  margin: 0;
+  max-width: none;
+  color: #b7b8bb;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.copy,
+.credit {
+  margin-top: 10px !important;
+  color: #8d8e92 !important;
+}
+
+.credit {
+  margin-top: 6px !important;
+}
+
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand,
+  .apps {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .inner {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+  }
+
+  .disclaimer {
+    padding-inline: 16px;
+  }
+}
